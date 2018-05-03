@@ -14,12 +14,40 @@ html, body {
 .main-container-grid {
     display: grid;
     /* one column three rows fr = fraction*/
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
 }
 .main-container-grid > div:nth-child(even) {
     background-color: #CCC;
+    height: 100vh;
 }
 
 .main-container-grid > div:nth-child(odd) {
     background-color: #f1f1f1;
 }
+/* main header */
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.header-logo {
+    align-self: center;
+
+}
+
+.header-center {
+    align-self: center;
+    justify-self: center;
+    display:grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.header-right {
+    align-self: center;
+    justify-self: right;
+}
+
+/* end main header */
