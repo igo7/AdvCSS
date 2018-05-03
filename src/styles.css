@@ -14,7 +14,7 @@ html, body {
 .main-container-grid {
     display: grid;
     /* one column three rows fr = fraction*/
-    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-rows: 1fr 12fr 1fr;
 }
 .main-container-grid > div:nth-child(even) {
     background-color: #CCC;
@@ -28,6 +28,7 @@ html, body {
 .main-header {
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
+    grid-auto-rows: minmax(75px, 75px);
 }
 
 .header-logo {
@@ -41,8 +42,14 @@ html, body {
     display:grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    /* you only classified it to have # of columns */
 
+}
+    /* aligning all divs under header-center to be centered  */
+.header-center > div {
+    justify-self: center;
+    align-self: center;
 }
 
 .header-right {
@@ -51,3 +58,39 @@ html, body {
 }
 
 /* end main header */
+
+/* main footer start */
+.main-footer {
+    grid-auto-rows: minmax(75px, 75px);
+}
+
+
+
+
+/* main-content-grid */
+.main-content-grid {
+    display:grid;
+    grid-template-columns:1fr 5fr 2fr;
+    height: calc(100vh - 150px);
+    overflow:hidden;
+
+}
+
+.left-sidebar {
+    justify-self: center;
+}
+
+.right-sidebar {
+    justify-self: center;
+}
+
+.main-content {
+    justify-self: left;
+    overflow:auto;
+    display: grid;
+    width: 100%;
+}
+
+
+
+/* main-content-end */
